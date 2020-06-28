@@ -23,5 +23,25 @@ APawnBase::APawnBase()
 	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
 }
 
+void APawnBase::RotateTurret(FVector LookAtTarget)
+{
+	// Update TurretMesh rotation to face towards the LookAtTarget passed in from the child Class.
+	// TurretMesh->SetWorldRotation()...
+}
 
+void APawnBase::Fire()
+{
+	// Get ProjectileSpawnPoint Location && Rotation -> Spawn Projectile class at Location towards Rotation.
+}
+
+void APawnBase::HandleDestruction()
+{
+	// Universal functionality ---
+	// Play death effects particle, sound and camera shake.
+
+	// ... Then do unique child overrides.
+	// -- PawnTurret - Inform CameMode Turret died -> Then Destroy() self.
+
+	// -- PawnTank - Inform GameMode Player died -> Then Hide() all components && stop movement Input.
+}
 
