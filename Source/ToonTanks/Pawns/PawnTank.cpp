@@ -33,7 +33,7 @@ void APawnTank::Tick(float DeltaTime)
 	Rotate();
 	Move();
 
-	if (!PlayerControllerRef)
+	if (PlayerControllerRef)
 	{
 		PlayerControllerRef->GetHitResultUnderCursor(ECC_Visibility, true, TraceHitResult);
 		FVector HitLocation = TraceHitResult.ImpactPoint;
