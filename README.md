@@ -8,3 +8,4 @@
 * Pseudocode Turret rotation, Fire, and Destruction functions
 * Begin implementing Turret rotation functionality 
 * Created the ProjectileBase class and the BP_ProjectileBase
+* Added Projectile firing functionality 
