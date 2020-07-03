@@ -10,3 +10,4 @@
 * Created the ProjectileBase class and the BP_ProjectileBase
 * Added Projectile firing functionality 
 * Created C++ GameMode and BP GameMode classes
+* Added functionality to the C++ GameMode class

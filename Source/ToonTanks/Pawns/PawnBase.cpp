@@ -25,6 +25,7 @@ APawnBase::APawnBase()
 	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
 }
 
+
 void APawnBase::RotateTurret(FVector LookAtTarget)
 {
 	// Find Rotation value to look at. 
@@ -55,3 +56,7 @@ void APawnBase::HandleDestruction()
 	// -- PawnTank - Inform GameMode Player died -> Then Hide() all components && stop movement Input.
 }
 
+void APawnBase::PawnDestroyed()
+{
+	HandleDestruction();
+}
