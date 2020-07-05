@@ -5,6 +5,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Particles/ParticleSystemComponent.h"
 
 // Sets default values
 AProjectileBase::AProjectileBase()
@@ -17,6 +18,9 @@ AProjectileBase::AProjectileBase()
 	RootComponent = ProjectileMesh;
 
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement"));
+
+	ParticleTrail = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Particle Trail"));
+	ParticleTrail->SetupAttachment(RootComponent);
 
 	ProjectileMovement->InitialSpeed = MovementSpeed;
 	ProjectileMovement->MaxSpeed = MovementSpeed;
@@ -52,6 +56,10 @@ void AProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 		if (HitSound)
 		{
 			UGameplayStatics::PlaySoundAtLocation(this, HitSound, GetActorLocation());
+		}
+		if (HitShake)
+		{
+			GetWorld()->GetFirstPlayerController()->PlayerCameraManager->PlayCameraShake(HitShake, 1);
 		}
 		Destroy();
 	}

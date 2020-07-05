@@ -31,11 +31,13 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Type", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AProjectileBase> ProjectileClass;
 
+	// EFFECTS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Effects", meta = (AllowPrivateAccess = "true"))
 		UParticleSystem* DeathParticle;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Effects", meta = (AllowPrivateAccess = "true"))
 		USoundBase* DeathSound;
-
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Effects", meta = (AllowPrivateAccess = "true"))
+		TSubclassOf<UCameraShake> DeathShake;
 public:
 	// Sets default values for this pawn's properties
 	APawnBase();

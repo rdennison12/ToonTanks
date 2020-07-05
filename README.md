@@ -16,3 +16,5 @@
 * Created particle effects
 * Removed the HealthComponent from BP Pawns and added it in C++
 * Added Particle and Sound effects 
+* Completed this section...
+  * Will revisit this project at a later date.
