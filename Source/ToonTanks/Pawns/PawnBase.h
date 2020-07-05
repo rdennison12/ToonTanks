@@ -7,6 +7,7 @@
 #include "PawnBase.generated.h"
 
 class UCapsuleComponent;
+class UHealthComponent;
 class AProjectileBase;
 
 UCLASS()
@@ -21,12 +22,17 @@ private:
 		UStaticMeshComponent* BaseMesh;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 		UStaticMeshComponent* TurretMesh;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Type", meta = (AllowPrivateAccess = "true"))
 		USceneComponent* ProjectileSpawnPoint;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UHealthComponent* HealthComponent;
 
 	// Variables.
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Type", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AProjectileBase> ProjectileClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Effects", meta = (AllowPrivateAccess = "true"))
+		UParticleSystem* DeathParticle;
 
 public:
 	// Sets default values for this pawn's properties
