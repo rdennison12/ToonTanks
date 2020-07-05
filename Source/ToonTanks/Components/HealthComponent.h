@@ -26,7 +26,7 @@ protected:
 
 
 private:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Health", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Health", meta = (AllowPrivateAccess = "true"))
 	float DefaultHealth = 100.f;
 	float Health = 0.f;
 

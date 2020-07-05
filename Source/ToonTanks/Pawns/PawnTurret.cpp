@@ -27,7 +27,7 @@ void APawnTurret::Tick(float DeltaTime)
 void APawnTurret::CheckFireCondition()
 {
 	// If Player == null || is Dead THEN BAIL!!
-	if (!PlayerPawn) { return; }
+	if (!PlayerPawn || !PlayerPawn->GetPlayerAlive()) { return; }
 	// If Player Player IS in range THEN FIRE!!!
 	if (ReturnDistanceToPlayer()<=FireRange)
 	{

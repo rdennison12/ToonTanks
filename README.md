@@ -11,3 +11,5 @@
 * Added Projectile firing functionality 
 * Created C++ GameMode and BP GameMode classes
 * Added functionality to the C++ GameMode class
+* Begin building the BP widgets
+* Completed Widgets and created player controller 

@@ -16,13 +16,13 @@ class TOONTANKS_API APawnBase : public APawn
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-		UCapsuleComponent * CapsuleComp = nullptr;
+		UCapsuleComponent * CapsuleComp;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-		UStaticMeshComponent* BaseMesh = nullptr;
+		UStaticMeshComponent* BaseMesh;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-		UStaticMeshComponent* TurretMesh = nullptr;
+		UStaticMeshComponent* TurretMesh;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-		USceneComponent* ProjectileSpawnPoint = nullptr;
+		USceneComponent* ProjectileSpawnPoint;
 
 	// Variables.
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Type", meta = (AllowPrivateAccess = "true"))
