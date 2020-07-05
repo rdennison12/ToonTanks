@@ -25,7 +25,7 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Type", meta = (AllowPrivateAccess = "true"))
 		USceneComponent* ProjectileSpawnPoint;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UHealthComponent* HealthComponent;
+	 UHealthComponent* HealthComponent;
 
 	// Variables.
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Type", meta = (AllowPrivateAccess = "true"))

@@ -13,4 +13,5 @@
 * Added functionality to the C++ GameMode class
 * Begin building the BP widgets
 * Completed Widgets and created player controller 
-* Created particle effects 
+* Created particle effects
+* Removed the HealthComponent from BP Pawns and added it in C++
