@@ -15,3 +15,4 @@
 * Completed Widgets and created player controller 
 * Created particle effects
 * Removed the HealthComponent from BP Pawns and added it in C++
+* Added Particle and Sound effects 
